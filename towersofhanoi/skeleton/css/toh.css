@@ -1,0 +1,38 @@
+.box {
+  height: 60px;
+  margin: 1px;
+
+}
+
+.disk1 {
+  text-align: center;
+  width: 200px;
+  background-color: blue;
+  border: medium solid black;
+  border-radius: 30px;
+}
+
+.disk2 {
+  margin-left:35px;
+  width: 130px;
+  background-color: teal;
+  border: medium solid black;
+  border-radius: 30px;
+}
+
+.disk3 {
+  margin-left: 70px;
+  width: 60px;
+  background-color: aqua;
+  border: medium solid black;
+  border-radius: 30px;
+}
+
+
+ul {
+  float: left;
+  list-style: none;
+  width: 200px; /* for  below IE7 use `width: 660px;` */
+  border-bottom: thick solid red;
+  margin: 50px;
+}

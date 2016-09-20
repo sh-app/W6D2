@@ -90,7 +90,11 @@
 	      alert("Taken!");
 	    }
 	    const mark = this.game.currentPlayer;
-	    this.game.playMove($square.data("pos"));
+	    // try {
+	      this.game.playMove($square.data("pos"));
+	    // } catch (error) {
+	    //   alert(`Something went wrong: ${error.msg}`);
+	    // }
 	    $square.removeClass("unclicked");
 	    $square.addClass("clicked");
 	    $square.addClass(`${mark}`);
