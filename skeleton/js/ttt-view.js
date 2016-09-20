@@ -8,14 +8,9 @@ class View {
   bindEvents() {
     let $li = $('li');
     $li.on('click', (e) => {
-      const mark = this.game.currentPlayer;
       const square = e.currentTarget;
       const $square = $(square);
-      $square.removeClass("unclicked");
-      $square.addClass("clicked");
-      $square.addClass(`${mark}`);
-      $square.text(`${mark}`);
-      this.makeMove($square.data("pos"));
+      this.makeMove($square);
     });
     $li.hover((e) => {
       const square = e.currentTarget;
@@ -29,7 +24,19 @@ class View {
   }
 
   makeMove($square) {
-    this.game.playMove($square);
+    if ($square.hasClass("clicked")) {
+      alert("Taken!");
+    }
+    const mark = this.game.currentPlayer;
+    this.game.playMove($square.data("pos"));
+    $square.removeClass("unclicked");
+    $square.addClass("clicked");
+    $square.addClass(`${mark}`);
+    $square.text(`${mark}`);
+
+    if (this.game.isOver()) {
+      alert(`${this.game.winner().toUpperCase()} won!!!!!!`);
+    }
   }
 
   setupBoard($el) {
