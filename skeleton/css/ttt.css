@@ -1,0 +1,36 @@
+ul {
+  list-style: none;
+  width: 650px;
+}
+
+.unclicked {
+  background-color: lightgray;
+}
+
+.clicked {
+  background-color: white;
+}
+
+.hover {
+  background-color: lightyellow;
+}
+
+.box {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 1px;
+  border: medium solid black;
+}
+
+.x {
+  font-size: 175px;
+  color: red;
+  text-align: center;
+}
+
+.o {
+  font-size: 175px;
+  color: blue;
+  text-align: center;
+}
